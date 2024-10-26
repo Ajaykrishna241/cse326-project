@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url(../images/project\ background.png);
+        
+    }
+    div{
+        height:550px;
+        width:300px;
+        border:2px solid black;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        margin-top: 100px;
+        margin-left: 600px;
+        border-radius: 20px;
+
+
+        
+    }
+    h2{
+        margin-left: 30px;  
+    }
+    label,input,select,textarea{
+        margin-left: 30px;
+        width:240px;
+        height:30px;
+        
+    }
+    input,select,textarea{
+        border-left: 3px solid rgb(124, 171, 54);
+        border-radius: 5px;
+    }
+    #submit{
+        width:230px;
+        height:40px;
+        margin-top: px;
+        margin-left: 30px;
+        background-color:rgb(53, 190, 53);
+        color:white;
+        border-radius: 5px;
+        border:1px solid;
+        cursor: pointer;
+    }
+    #text{
+        height:70px;
+       
+    }
+</style>
+<body>
+    <script>
+        function checkFor() {
+        var username = document.forms["myForm"]["name"].value;
+        var password = document.forms["myForm"]["password"].value;
+        
+        if (username =="" || password == "" 
+        ) {
+        alert("Username and password are required");
+        return false;
+        }
+        
+        }
+         </script>  
+    <div>
+        <h2>Registration form</h2>
+        <form action="main interface.html" name="myForm" onsubmit="return checkFor()">
+            <label for="name">Name  </label><br>
+            <input type="text" id="name" ><br><br>
+            <label for="email"> Email           </label><br>
+            <input type="email" id="email"><br><br>
+            <label for="password">Password</label><br>
+            <input type="password" ><br><br>
+            <label for="gender">Gender</label><br>
+            <select name="gender" id="gender"><br><br>
+            <option id="select">select</option>
+            <option class="male">Male</option>
+            <option class="male">Female</option></select><br><br>
+            <label for="adress">Bio</label><br>
+            <textarea cols="5" rows="2" id="text"></textarea><br><br>
+            <input type="submit" id="submit" value="Enter" formaction="main interface.html">
+
+        </form>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../images/project\ background.png);
+    background-size: cover;
+}
+
+.glass-container{
+    width:300px;
+    height:450px;
+    background:transparent;
+    backdrop-filter:blur(10px);
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20cap;
+
+}
+input{
+    margin-top:50px;
+    background: transparent;
+    height:40px;
+    width: 200px;
+    border-radius: 20px;
+    color:white;
+    border-color: white;
+
+    
+}
+#buttono{
+    margin-top:60px;
+    width:200px;
+    height:40px;
+    background: transparent;
+    backdrop-filter:blur(20px);
+    color:white;
+    border-radius: 20px;
+    transition:background-color 0.8s,color 0.8s,transform 0.8s;
+}
+#buttono:hover{
+    background-color: white;
+    color:black;
+    transform:translateY(-10px);
+    cursor: pointer;
+}
+h2{
+    margin-top: 20px;
+}
+p{
+    color:aqua
+}
+p a{
+    text-decoration: none;
+    color:antiquewhite
+}
+    </style>
+</head>
+
+<body>
+    <div class="glass-container">
+<h2>Login</h2>
+<script>
+    function checkForm() {
+    var username = document.forms["myForm"]["username"].value;
+    var password = document.forms["myForm"]["password"].value;
+    if (username =="" || password == "") {
+    alert("Username and password are required");
+    return false;
+    }
+    
+    }
+     </script>  
+<form name="myForm" onsubmit="return checkForm()" action="main interface.html">
+<label for="username"></label>
+<input type="text" name="username" id="username" placeholder="Username">
+<br>
+<label for="password"></label>
+<input type="password" name="password" id="password" placeholder="Password">
+<br><br>
+<input type="submit" value="Submit" id="buttono" formaction="main interface.html">
+</form>
+<br><p>new member?:<br>
+    <a href="signup.html">clickhere</a><br> to create new account</p>
+
+
+
+
+    </div>
+        
+    
+    
+</body>
+</html>
